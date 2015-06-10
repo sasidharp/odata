@@ -3,6 +3,22 @@
 # EDM CSDL 2.3
 
 
+# Base Element for all the elements in the EDM model
+class Element(object):
+    def get_name(self):
+        pass
+
+# Root Element
+class edmx(Element):
+    # Namespace
+    xmlms = "xmlns:edmx=""http://docs.oasis-open.org/odata/ns/edmx"
+    # Element Edmx must have version 4.0
+    Version = "4.0"
+
+# Schema Element [Should have one or more DataService Elemets]
+class edmschema(Element):
+    pass
+
 class Documentation(object):
     pass
 
